@@ -52,6 +52,9 @@ function Container({ setValue, ...props }) {
           <button onClick={Upgrade} className="btn btn-warning">
             up
           </button>
+          <button onClick={()=>props.deleteData(props.rank)} className="btn btn-warning">
+            delete
+          </button>
         </div>
       </div>
     </>
