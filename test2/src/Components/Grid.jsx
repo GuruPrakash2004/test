@@ -5,6 +5,7 @@ function Grid(props){
      let content = props.content;
     const [isShow,setIsShow] = useState(false);
     //for count 
+    
     const [count,setCount] = useState(0);
 
     function isToggle(){
