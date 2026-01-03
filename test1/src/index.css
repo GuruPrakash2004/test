@@ -1,0 +1,16 @@
+
+.img1 {
+  width: 100px;
+  height: 50px;
+  
+}
+
+.course img{
+  width: auto;
+  height: auto;
+  object-fit: fill;
+}
+
+.course{
+  width: 300px;
+}
