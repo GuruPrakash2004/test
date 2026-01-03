@@ -37,7 +37,7 @@ function ContainerList({ setValue }) {
     image: img4,
     title: "JavaScript",
     desp: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iure?",
-  },
+  }
 ]);
 
 function handdelDelete(rank){
