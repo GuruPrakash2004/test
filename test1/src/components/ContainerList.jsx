@@ -3,8 +3,17 @@ import img2 from "../images/courses/img2.jpeg";
 import img3 from "../images/courses/img1.jpeg";
 import img4 from "../images/courses/img2.jpeg";
 import Container from "./Container";
+import { useState } from "react";
 
-var list = [
+
+
+// var sortArr = list.sort((x, y) => x.rank - y.rank);
+
+
+
+
+function ContainerList({ setValue }) {
+    const  [list,setList] = useState([
   {
     rank: 3,
     image: img1,
@@ -28,14 +37,15 @@ var list = [
     image: img4,
     title: "JavaScript",
     desp: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iure?",
-  },
-];
+  }
+]);
 
-var sortArr = list.sort((x, y) => x.rank - y.rank);
+function handdelDelete(rank){
+    console.log("deleted");
+    var newList = list.filter((item) => item.rank != rank);
+    setList(newList);
+}
 
-var Flist = list.filter((item) => item.rank < 4);
-
-function ContainerList({ setValue }) {
   var ListContent = list.map((items, index) => (
     <Container
       key={index}
@@ -44,6 +54,7 @@ function ContainerList({ setValue }) {
       desp={items.desp}
       rank={items.rank}
       setValue={setValue}
+      deleteData = {handdelDelete}
     />
   ));
 
